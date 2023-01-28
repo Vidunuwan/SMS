@@ -8,11 +8,12 @@
                     <div class="card-header">{{ __('Register') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('register') }}" id="reg_form">
                             @csrf
 
                             <div class="row mb-3">
-                                <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                                <label for="name"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
@@ -85,3 +86,31 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            var isEmty = true;
+            $('#reg_form').keyup(function() {
+                if ($('#name').val() && $('#email').val() && $('#password').val() && $('#password-confirm')
+                    .val()) {
+                    isEmty = false;
+                } else {
+                    isEmty = true;
+                }
+            });
+            var i = 0;
+            $('#reg_btn').mouseover(function() {
+                var p = 0;
+                if (i == 0 && isEmty) {
+                    p = 100;
+                    i = 1
+                } else {
+                    p = 0;
+                    i = 0
+                }
+                $(this).css("margin-left", p + "px");
+            });
+        })
+    </script>
+@endpush

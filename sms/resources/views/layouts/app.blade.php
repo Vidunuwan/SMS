@@ -15,6 +15,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
@@ -81,37 +82,7 @@
             @yield('content')
         </main>
     </div>
+    @stack('scripts')
 </body>
 
 </html>
-
-<script>
-    let div = document.getElementById('reg_div');
-    let btn=document.getElementById('reg_btn');
-    moveContent(200,btn);
-
-
-
-    function moveContent(positionPx,tag){
-        let i=0;
-        let p = positionPx;
-        btn.addEventListener('mouseover', function(){
-            i++;
-            if(i%2==1){
-                p=positionPx;
-            }
-            else{
-                p=0;
-            }
-            //console.log(i,p);
-            div.style.transform = "translateX("+p+"px)";
-
-    });
-
-    }
-
-    // btn.addEventListener('mouseout',function(){
-    //     console.log('mouse is out');
-    //     div.style.transform = "translateX(-200px)";
-    // });
-</script>
