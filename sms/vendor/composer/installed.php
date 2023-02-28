@@ -3,13 +3,31 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'ff10444c42883dd9da4c17059b4881e90b9600cd',
+        'reference' => '085368b0361a74254c9eb01459cc5405aaa8f8de',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'barryvdh/elfinder-flysystem-driver' => array(
+            'pretty_version' => 'v0.4.3',
+            'version' => '0.4.3.0',
+            'reference' => '064d5b2c89ca185f3736e7e5c906d76d3632b30c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../barryvdh/elfinder-flysystem-driver',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'barryvdh/laravel-elfinder' => array(
+            'pretty_version' => 'v0.5.2',
+            'version' => '0.5.2.0',
+            'reference' => '243c7201790934d8c5ffa586c22e832c3713f75a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../barryvdh/laravel-elfinder',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.10.2',
             'version' => '0.10.2.0',
@@ -358,6 +376,15 @@
                 0 => 'v9.48.0',
             ),
         ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.2',
+            'version' => '2.7.2.0',
+            'reference' => '04be355f8d6734c826045d02a1079ad658322dad',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -376,7 +403,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'ff10444c42883dd9da4c17059b4881e90b9600cd',
+            'reference' => '085368b0361a74254c9eb01459cc5405aaa8f8de',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -967,6 +994,15 @@
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'studio-42/elfinder' => array(
+            'pretty_version' => '2.1.61',
+            'version' => '2.1.61.0',
+            'reference' => '33bee2654615db62e9b722efb4fdd2a21844fbb2',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../studio-42/elfinder',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v6.2.3',

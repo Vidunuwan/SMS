@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/elfinder', 'Barryvdh\Elfinder\ElfinderController@showIndex');
+//Route::get('elfinder', [\Barryvdh\Elfinder\Controllers\ElfinderController::class, 'show'])->name('elfinder.show');
+
